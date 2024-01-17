@@ -5,6 +5,23 @@ contract Example {
     bool check;
     uint8 public val;
 
+    //address start
+    address locationOne;
+    address locationtwo;
+
+    function compareAddresses(
+        address _loOne,
+        address _loTwo
+    ) public pure returns (bool) {
+        return _loOne == _loTwo;
+    }
+
+    function getBalance(address _account) public view returns (uint) {
+        return _account.balance;
+    }
+
+    //address tut end
+
     function checkGreater(uint a, uint b) public {
         check = a > b;
     }
