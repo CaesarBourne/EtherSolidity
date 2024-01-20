@@ -18,4 +18,8 @@ contract ConstructorExample {
     function getPrice() public view returns (uint) {
         return price;
     }
+
+    function testPrice() public view returns (uint) {
+        return price;
+    }
 }
