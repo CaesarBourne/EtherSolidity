@@ -1,0 +1,15 @@
+{
+  "name": "EtherSolidity",
+  "version": "1.0.0",
+  "description": "ether and solidity",
+  "main": "index.js",
+  "repository": "https://github.com/CaesarBourne/EtherSolidity.git",
+  "author": "“CaesarBourne” <“caesaradek@gmail.com”>",
+  "license": "MIT",
+  "devDependencies": {
+    "ethers": "^6.10.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.2"
+  }
+}
