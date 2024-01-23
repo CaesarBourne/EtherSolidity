@@ -1,4 +1,4 @@
-const { ethers } = require("ethers");
+// const { ethers } = require("ethers");
 
 const contractAddress = "0x8E0aCb147974AF8F4efE58fD05084B7DAb97B4e4";
 
@@ -17,4 +17,17 @@ const connect = async () => {
     await walletContract.myAllowance();
   document.getElementById("wallet-balance").textContent =
     await walletContract.getWalletBalance();
+};
+const renew = async () => {
+  const account = document.getElementById("user").value;
+  const amount = document.getElementById("allowance").value;
+  var tx = await walletContract.renewAllowance(account, amount, 86400);
+  await tx.wait();
+};
+
+const spend = async () => {
+  const account = document.getElementById("receiver").value;
+  const amount = document.getElementById("amount").value;
+  var tx = await walletContract.spendCoins(account, amount);
+  await tx.wait();
 };
