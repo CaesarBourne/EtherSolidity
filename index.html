@@ -17,7 +17,7 @@
     <p id="wallet-address"></p>
 
     <h4>Pending Allowance : <span id="pending-allowance"></span></h4>
-    <form autocomplete="off">
+    <form autocomplete="off" onsubmit="spend();return false;">
       <input
         id="receiver"
         type="text"
@@ -37,7 +37,7 @@
 
     <h3>For Admin Use Only</h3>
     <h4>Wallet Balance : <span id="wallet-balance"></span></h4>
-    <form autocomplete="off">
+    <form autocomplete="off" onsubmit="renew();return false;">
       <input
         id="user"
         type="text"
