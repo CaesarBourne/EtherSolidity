@@ -61,6 +61,16 @@ const main = async () => {
     console.log("Num value after incrementing COntarct  ", String(numVal));
 
     //decrementing num
-    let trnsactionDecremenet = MyContract.connect(account).decrement();
-  } catch (error) {}
+    let transactionDecremenet = MyContract.connect(account).decrement();
+    transactionDecremenet.wait();
+    console.log("Num value has been decremented by first account.");
+
+    //fetcj after decrementing
+    numVal = MyContract.getNum();
+    console.log("Num value after decrementing COntarct  ", String(numVal));
+  } catch (error) {
+    console.error("error val ", error);
+  }
 };
+
+main();
