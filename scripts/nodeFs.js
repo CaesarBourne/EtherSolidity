@@ -40,3 +40,10 @@ fs.appendFile("./manna.js", conetentWritten, { flag: "a+" }, (err) => {
   }
   //   console.log("file erittten ", file);
 });
+
+fs.close("./manna.js", conetentWritten, { flag: "a+" }, (err) => {
+  if (err) {
+    console.error(err);
+  }
+  //   console.log("file erittten ", file);
+});
